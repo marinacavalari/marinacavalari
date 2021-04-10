@@ -15,7 +15,7 @@ object MarinaCavalari extends Developer {
   )
 
   override def definition(datasets: Map[String, DataFrame]): DataFrame = {
-    Marina
+    MarinaCavalari
       .transform(skills)
       .transform(education)
       .transform(interest)
