@@ -42,8 +42,7 @@ object MarinaCavalari extends Developer {
         .withColumn("MBA Degree", lit("Data Engenieering, FIAP"))
     }
 
-    def interest(df: Dataframe): Dataframe = {![instagram](https://user-images.githubusercontent.com/46076369/114327651-52734480-9b10-11eb-85fa-d9a9c492eaf5.png)
-
+    def interest(df: Dataframe): Dataframe = {
       df.withColumn(
         "TechInterest",
         lit("Functional Programming", "Data Acess", "Kafka", "Airflow", "Spark")
