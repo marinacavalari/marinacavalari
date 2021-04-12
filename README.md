@@ -2,7 +2,7 @@
 object MarinaCavalari extends Developer {
 
   override def name: String = "Marina Cavalari"
-  override def description: String = "Functional "
+  override def description: String = "Functional programming enthusiast and data engineer."
   override def country: Country = Country.Brazil
   override def city: City = City.SaoPaulo
   override def bornAt: LocalDate = LocalDate.parse("1997-01-07")
