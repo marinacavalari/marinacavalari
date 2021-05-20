@@ -33,16 +33,16 @@ object MarinaCavalari extends Developer {
       df.withColumn(
         "Stack",
         lit(
-          "Python",
+          ["Python",
           "Scala",
           "Clojure",
           "Spark",
           "SQL",
           "HTML",
           "Power BI",
-          "JavaScript"
+          "JavaScript"]
         )
-      ).withColumn("Cloud", lit("AWS", "Google CLoud"))
+      ).withColumn("Cloud", lit(["AWS", "Google CLoud"]))
     }
 
     def education(df: Dataframe): Dataframe = {
@@ -53,15 +53,15 @@ object MarinaCavalari extends Developer {
     def interest(df: Dataframe): Dataframe = {
       df.withColumn(
         "TechInterest",
-        lit("Functional Programming", "Data Acess", "Kafka", "Airflow", "Spark")
+        lit(["Functional Programming", "Data Acess", "Kafka", "Airflow", "Spark"])
       ).withColumn(
         "HouseholdInterest",
-        lit("Plants", "Decor", "Crochet", "Tennis")
+        lit(["Plants", "Decor", "Crochet", "Tennis"])
       )
     }
 
     def langage(df: Dataframe): Dataframe = {
-      df.withColumn("SpokeLanguages", lit("Portuguese", "English"))
+      df.withColumn("SpokeLanguages", lit(["Portuguese", "English"]))
 
     }
   }
