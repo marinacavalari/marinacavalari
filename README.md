@@ -53,7 +53,7 @@ object MarinaCavalari extends Developer {
     def interest(df: Dataframe): Dataframe = {
       df.withColumn(
         "TechInterest",
-        lit(["Functional Programming", "Data Acess", "Kafka", "Airflow", "Spark"])
+        lit(["Functional Programming", "Data Access", "Kafka", "Airflow", "Spark"])
       ).withColumn(
         "HouseholdInterest",
         lit(["Plants", "Decor", "Crochet", "Tennis"])
