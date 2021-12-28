@@ -6,66 +6,13 @@
 <a href="marina.cavalari.mc@gmail.com"> <img src="https://user-images.githubusercontent.com/46076369/114327735-9e25ee00-9b10-11eb-9b08-64c0f0fd7c07.png" width=40px> </a>
 <a href="https://t.me/st4rdust_x"> <img src="https://user-images.githubusercontent.com/46076369/114327724-97977680-9b10-11eb-83a4-0d9a91714967.png" width=40px> </a>
   
-```scala 
-object MarinaCavalari extends Developer {
-
-  override def name: String = "Marina Cavalari"
-  override def description: String = "Functional programming enthusiast and data engineer."
-  override def country: Country = Country.Brazil
-  override def city: City = City.SaoPaulo
-  override def bornAt: LocalDate = LocalDate.parse("1997-01-07")
-  override def contact: String = "marina.cavalari.mc@gmail.com"
-  override def gender: String = "Woman"
-  override def age: Int = 24
-
-  def inputs: Set[String] = Set(
-    MarinaCavalari.name
-  )
-
-  override def definition(datasets: Map[String, DataFrame]): DataFrame = {
-    MarinaCavalari
-      .transform(skills)
-      .transform(education)
-      .transform(interest)
-      .transform(language)
-
-    def skills(df: Dataframe): Dataframe = {
-      df.withColumn(
-        "Stack",
-        lit(
-          ["Python",
-          "Scala",
-          "Clojure",
-          "Spark",
-          "SQL",
-          "HTML",
-          "Power BI",
-          "JavaScript"]
-        )
-      ).withColumn("Cloud", lit(["AWS", "Google CLoud"]))
-    }
-
-    def education(df: Dataframe): Dataframe = {
-      df.withColumn("Bachelor Degree", lit("Business Management"))
-        .withColumn("MBA Degree", lit("Data Engenieering, FIAP"))
-    }
-
-    def interest(df: Dataframe): Dataframe = {
-      df.withColumn(
-        "TechInterest",
-        lit(["Functional Programming", "Data Access", "Kafka", "Airflow", "Spark"])
-      ).withColumn(
-        "HouseholdInterest",
-        lit(["Plants", "Decor", "Crochet", "Tennis"])
-      )
-    }
-
-    def langage(df: Dataframe): Dataframe = {
-      df.withColumn("SpokeLanguages", lit(["Portuguese", "English"]))
-
-    }
-  }
-}
+```clojure
+(def developer 
+  {:name "Marina Cavalari"
+   :country :Brazil
+   :skills {:cloud [:AWS :CGP]
+            :Stack [:python :clojure :scala :spark :sql]}
+   :languages [:portuguese :english]})
 ```
 
 
