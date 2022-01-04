@@ -10,7 +10,7 @@
 (def developer 
   {:name "Marina Cavalari"
    :country :Brazil
-   :skills {:cloud [:AWS :CGP]
+   :skills {:cloud [:AWS :GCP]
             :Stack [:python :clojure :scala :spark :sql]}
    :languages [:portuguese :english]})
 ```
