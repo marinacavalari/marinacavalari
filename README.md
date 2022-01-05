@@ -11,7 +11,7 @@
   {:name "Marina Cavalari"
    :country :Brazil
    :skills {:cloud [:AWS :GCP]
-            :Stack [:python :clojure :scala :spark :sql]}
+            :Stack [:clojure :scala :spark :sql :python]}
    :languages [:portuguese :english]})
 ```
 
